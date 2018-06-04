@@ -26,18 +26,18 @@ model = LinearRegression()
 model.fit(X_train, y_train)
 
 # verifichiamo l'apprendimento sui dati di training
-y_train_predicted = model.predict(X_train)
-train_score = mean_squared_error(y_train, y_train_predicted)
+pred_train = model.predict(X_train)
+train_score = mean_squared_error(y_train, pred_train)
 print('Train error', train_score)
 
 # testiamo il modello sui dati di test
-y_test_predicted = model.predict(X_test)
-test_score = mean_squared_error(y_test, y_test_predicted)
+pred_test = model.predict(X_test)
+test_score = mean_squared_error(y_test, pred_test)
 print('Test error', test_score)
 
 # prestazioni del modello dummy (baseline)
 dummy = DummyRegressor()
 dummy.fit(X_train, y_train)
-y_test_predicted_dummy = dummy.predict(X_test)
-dummy_score = mean_squared_error(y_test, y_test_predicted_dummy)
+pred_test_dummy = dummy.predict(X_test)
+dummy_score = mean_squared_error(y_test, pred_test_dummy)
 print('Dummy test error', dummy_score)
