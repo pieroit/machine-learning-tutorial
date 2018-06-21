@@ -1,4 +1,5 @@
 # importiamo le funzionalita'
+import numpy as np
 from sklearn.datasets import load_digits
 from sklearn.linear_model import LogisticRegression
 import matplotlib.pyplot as plt
@@ -9,8 +10,8 @@ dataset = load_digits()
 X = dataset.data
 y = dataset.target
 
-import numpy
-print(numpy.shape(X))
+
+print(np.shape(X))
 
 # costruisci il modello
 model = LogisticRegression()
