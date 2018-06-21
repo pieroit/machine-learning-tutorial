@@ -12,7 +12,7 @@ boston_df          = pd.DataFrame(boston_dataset.data)
 boston_df.columns  = boston_dataset.feature_names
 boston_df['PRICE'] = boston_dataset.target
 
-# aggiungi feature categorica
+# aggiungi variabile categorica
 def price_category(p):
     if p > 25:
         return 'ALTO'
