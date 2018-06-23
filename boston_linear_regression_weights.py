@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 # importiamo le funzionalita' che useremo
 import numpy as np
 np.random.seed(1)

@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 # importiamo le funzionalita' per calcolare gli errori di un regressore
 from sklearn.metrics import mean_squared_error, r2_score
 
