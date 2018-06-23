@@ -16,10 +16,13 @@ print(boston_dataset['DESCR'])
 
 # estraiamo le features (input) e il target (output)
 X = boston_dataset.data # dati
-y = boston_dataset.target #prezzo
+y = boston_dataset.target # prezzo
 
 # dividiamo i dati in training e test set
 X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+# train li uso per fare il modello iterando su tutti i dati
+# test sono i dati su cui prova il modello
 
 # addestriamo il modello sui dati di training
 model = LinearRegression()
