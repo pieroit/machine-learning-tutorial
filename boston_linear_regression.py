@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 # importiamo le funzionalita' che useremo
 import numpy as np
 np.random.seed(1)
@@ -15,8 +15,8 @@ boston_dataset = load_boston()
 print(boston_dataset['DESCR'])
 
 # estraiamo le features (input) e il target (output)
-X = boston_dataset.data
-y = boston_dataset.target
+X = boston_dataset.data # dati
+y = boston_dataset.target #prezzo
 
 # dividiamo i dati in training e test set
 X_train, X_test, y_train, y_test = train_test_split(X, y)
@@ -29,6 +29,8 @@ model.fit(X_train, y_train)
 pred_test = model.predict(X_test)
 test_score = r2_score(y_test, pred_test)
 print('Test score', test_score)
+
+
 
 
 
