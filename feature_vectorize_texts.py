@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 # immaginiamo una serie di testi (preprocessati)

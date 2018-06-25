@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 import numpy as np
 from sklearn import datasets
 from sklearn.metrics import confusion_matrix, classification_report, accuracy_score

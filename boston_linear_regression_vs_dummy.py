@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 # importiamo le funzionalita' che useremo
 import matplotlib.pyplot as plt
 import pandas as pd

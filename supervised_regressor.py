@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import pandas as pd
 import numpy as np
 np.random.seed(1)   # per avere semrpe lo stesso risultato

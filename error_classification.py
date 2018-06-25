@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 # importiamo le funzionalita' per calcolare gli errori di un classificatore
 from sklearn.metrics import accuracy_score, confusion_matrix
 
