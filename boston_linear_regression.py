@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 # importiamo le funzionalita' che useremo
 import numpy as np
 np.random.seed(1)
@@ -21,8 +22,8 @@ y = boston_dataset.target # prezzo
 # dividiamo i dati in training e test set
 X_train, X_test, y_train, y_test = train_test_split(X, y)
 
-# train li uso per fare il modello iterando su tutti i dati
-# test sono i dati su cui prova il modello
+# train li usiamo per addestrare il modello iterando su tutti i dati e correggendo gli errori
+# test sono i dati su cui validiamo il modello quando l'addestramento e' finito
 
 # addestriamo il modello sui dati di training
 model = LinearRegression()
