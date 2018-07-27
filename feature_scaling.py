@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, QuantileTransformer
 from sklearn.datasets import load_iris
 
 # carichiamo dati iris
