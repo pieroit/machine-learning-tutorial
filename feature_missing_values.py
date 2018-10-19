@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-from sklearn.preprocessing import Imputer
+from sklearn.impute import SimpleImputer
 import pandas as pd
+import numpy as np
 
 # immaginiamo un dataset con valori mancanti
 data = [
-    [2, 0],
-    [2, 0],
     [3, 1],
-    [None, None]
+    [3, 1],
+    [2, 0],
+    [np.nan, np.nan]
 ]
 
 # sostituiamo i valori mancanti con la media della colonna
-imputer = Imputer(strategy='mean')
+imputer = SimpleImputer(strategy='mean')
 data_with_mean_strategy = imputer.fit_transform(data)
 print('valori mancanti sostituiti dalla media')
 print(data_with_mean_strategy)
 
 # sostituiamo i valori mancanti con la moda della colonna
-imputer = Imputer(strategy='most_frequent')
+imputer = SimpleImputer(strategy='most_frequent')
 data_with_mode_strategy = imputer.fit_transform(data)
 print('valori mancanti sostituiti dalla moda')
 print(data_with_mode_strategy)

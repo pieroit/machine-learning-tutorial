@@ -10,8 +10,9 @@ iris_dataset = load_iris()
 print(iris_dataset['DESCR'])
 iris_data = iris_dataset.data
 
+
 # scaliamo i dati
-scaler = MinMaxScaler()
+scaler = StandardScaler()
 iris_data_scaled = scaler.fit_transform(iris_data)
 
 # grafici del prima e dopo lo scaling
