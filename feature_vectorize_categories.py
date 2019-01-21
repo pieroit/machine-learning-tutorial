@@ -1,29 +1,28 @@
 #!/usr/bin/python3
-from sklearn.feature_extraction import DictVectorizer
-from sklearn.preprocessing import OneHotEncoder, MultiLabelBinarizer
+
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
-import pandas as pd
 
-# immaginiamo dei dati con una colonna categorica
-df = pd.DataFrame({
-    'altezza': [180, 200, 160, 175],
-    'peso'   : [100, 110, 80, 100],
-    'sport'  : ['rugby', 'basket', 'rugby', 'soccer']
-})
-
+# immaginiamo dei dati con una colonna categorica (peso dell'atleta, altezza, sport)
+X = [
+    [110, 1.70, 'rugby'],
+    [100, 1.90, 'basket'],
+    [120, 1.90, 'rugby'],
+    [ 70, 1.60, 'soccer'],
+]
 
 transformer = ColumnTransformer(
     [
-        [ 'sport_vector', OneHotEncoder(), ['sport'] ]
+        [ 'sport_vector', OneHotEncoder(), [2] ] # one hot encoding per la colonna di indice 2
         # qui si possono specificare altri trasformatori per altre colonne
     ],
     remainder='passthrough'
 )
 
-vectorized_data = transformer.fit_transform(df)
+X = transformer.fit_transform(X)
 
 print('one hot encoding per la colonna "sport"')
-print(vectorized_data)
+print(X)
 
 
 
